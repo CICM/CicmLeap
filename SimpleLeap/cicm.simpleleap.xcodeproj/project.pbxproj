@@ -1,0 +1,278 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2C1A10B4189EBCFF001D33B0 /* MaxAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C1A10B3189EBCFF001D33B0 /* MaxAPI.framework */; };
+		2CDEA64119B72819007F869F /* cicm.simpleleap.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2CDEA64019B72819007F869F /* cicm.simpleleap.cpp */; };
+		2CF4C7D119C31A7D0054FF6A /* Leap.h in Headers */ = {isa = PBXBuildFile; fileRef = 2CF4C7D019C31A7D0054FF6A /* Leap.h */; };
+		2CF4C7D319C31AB40054FF6A /* libLeap.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CF4C7D219C31AB40054FF6A /* libLeap.dylib */; };
+		2CF4C7D419C31AC50054FF6A /* libLeap.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2CF4C7D219C31AB40054FF6A /* libLeap.dylib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		41E47A4B166F9426006D3CB8 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 12;
+			dstPath = Contents/MacOS;
+			dstSubfolderSpec = 1;
+			files = (
+				2CF4C7D419C31AC50054FF6A /* libLeap.dylib in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		2C1A10B3189EBCFF001D33B0 /* MaxAPI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MaxAPI.framework; path = "../../SDKs/MaxSDK-6.1.4/c74support/max-includes/x64/MaxAPI.framework"; sourceTree = "<group>"; };
+		2C50B787189BEEAE003FC744 /* max-sdk-6.1.4.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "max-sdk-6.1.4.xcconfig"; sourceTree = "<group>"; };
+		2CDEA64019B72819007F869F /* cicm.simpleleap.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = cicm.simpleleap.cpp; sourceTree = "<group>"; };
+		2CF4C7D019C31A7D0054FF6A /* Leap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Leap.h; path = ../../../SDKs/LeapSDK/include/Leap.h; sourceTree = "<group>"; };
+		2CF4C7D219C31AB40054FF6A /* libLeap.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libLeap.dylib; path = "../../../SDKs/LeapSDK/lib/libc++/libLeap.dylib"; sourceTree = "<group>"; };
+		2FBBEAE508F335360078DB84 /* cicm.simpleleap.mxo */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = cicm.simpleleap.mxo; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2FBBEADC08F335360078DB84 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2CF4C7D319C31AB40054FF6A /* libLeap.dylib in Frameworks */,
+				2C1A10B4189EBCFF001D33B0 /* MaxAPI.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		089C166AFE841209C02AAC07 /* iterator */ = {
+			isa = PBXGroup;
+			children = (
+				2C50B787189BEEAE003FC744 /* max-sdk-6.1.4.xcconfig */,
+				08FB77ADFE841716C02AAC07 /* Source */,
+				089C1671FE841209C02AAC07 /* External Frameworks and Libraries */,
+				19C28FB4FE9D528D11CA2CBB /* Products */,
+			);
+			name = iterator;
+			sourceTree = "<group>";
+		};
+		089C1671FE841209C02AAC07 /* External Frameworks and Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				2CF4C7D219C31AB40054FF6A /* libLeap.dylib */,
+				2C1A10B3189EBCFF001D33B0 /* MaxAPI.framework */,
+			);
+			name = "External Frameworks and Libraries";
+			sourceTree = "<group>";
+		};
+		08FB77ADFE841716C02AAC07 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				2CF4C7D019C31A7D0054FF6A /* Leap.h */,
+				2CDEA64019B72819007F869F /* cicm.simpleleap.cpp */,
+			);
+			name = Source;
+			sourceTree = "<group>";
+		};
+		19C28FB4FE9D528D11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2FBBEAE508F335360078DB84 /* cicm.simpleleap.mxo */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		2FBBEAD708F335360078DB84 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2CF4C7D119C31A7D0054FF6A /* Leap.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		2FBBEAD608F335360078DB84 /* max-external */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2FBBEAE008F335360078DB84 /* Build configuration list for PBXNativeTarget "max-external" */;
+			buildPhases = (
+				2FBBEAD708F335360078DB84 /* Headers */,
+				2FBBEAD808F335360078DB84 /* Resources */,
+				2FBBEADA08F335360078DB84 /* Sources */,
+				2FBBEADC08F335360078DB84 /* Frameworks */,
+				2FBBEADF08F335360078DB84 /* Rez */,
+				41E47A4B166F9426006D3CB8 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "max-external";
+			productName = iterator;
+			productReference = 2FBBEAE508F335360078DB84 /* cicm.simpleleap.mxo */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		089C1669FE841209C02AAC07 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0500;
+			};
+			buildConfigurationList = 2FBBEACF08F335010078DB84 /* Build configuration list for PBXProject "cicm.simpleleap" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 089C166AFE841209C02AAC07 /* iterator */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2FBBEAD608F335360078DB84 /* max-external */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2FBBEAD808F335360078DB84 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXRezBuildPhase section */
+		2FBBEADF08F335360078DB84 /* Rez */ = {
+			isa = PBXRezBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXRezBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2FBBEADA08F335360078DB84 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2CDEA64119B72819007F869F /* cicm.simpleleap.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		2FBBEAD008F335010078DB84 /* Development */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2C50B787189BEEAE003FC744 /* max-sdk-6.1.4.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				OTHER_LDFLAGS = "$(C74_SYM_LINKER_FLAGS)";
+			};
+			name = Development;
+		};
+		2FBBEAD108F335010078DB84 /* Deployment */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2C50B787189BEEAE003FC744 /* max-sdk-6.1.4.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				OTHER_LDFLAGS = "$(C74_SYM_LINKER_FLAGS)";
+			};
+			name = Deployment;
+		};
+		2FBBEAE108F335360078DB84 /* Development */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2C50B787189BEEAE003FC744 /* max-sdk-6.1.4.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				CLANG_WARN_CXX0X_EXTENSIONS = NO;
+				CLANG_WARN__EXIT_TIME_DESTRUCTORS = NO;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\\\\\\\"$(SRCROOT)/../../../c74support/max-includes\\\\\\\"",
+					"/Users/elioton/Documents/programmation/CICM/SDKs/MaxSDK-6.1.4/c74support/max-includes",
+					"/Users/elioton/Documents/programmation/CICM/SDKs/MaxSDK-6.1.4/c74support/max-includes/x64",
+				);
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_REUSE_STRINGS = YES;
+				GCC_VERSION = "";
+				GCC_WARN_ABOUT_INVALID_OFFSETOF_MACRO = YES;
+				GCC_WARN_HIDDEN_VIRTUAL_FUNCTIONS = NO;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)",
+					"/Users/elioton/Documents/programmation/CICM/SDKs/LeapSDK/lib/libc++",
+				);
+				PRODUCT_NAME = cicm.simpleleap;
+			};
+			name = Development;
+		};
+		2FBBEAE208F335360078DB84 /* Deployment */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2C50B787189BEEAE003FC744 /* max-sdk-6.1.4.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				CLANG_WARN_CXX0X_EXTENSIONS = NO;
+				CLANG_WARN__EXIT_TIME_DESTRUCTORS = NO;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\\\\\\\"$(SRCROOT)/../../../c74support/max-includes\\\\\\\"",
+					"/Users/elioton/Documents/programmation/CICM/SDKs/MaxSDK-6.1.4/c74support/max-includes",
+					"/Users/elioton/Documents/programmation/CICM/SDKs/MaxSDK-6.1.4/c74support/max-includes/x64",
+				);
+				GCC_REUSE_STRINGS = YES;
+				GCC_VERSION = "";
+				GCC_WARN_ABOUT_INVALID_OFFSETOF_MACRO = YES;
+				GCC_WARN_HIDDEN_VIRTUAL_FUNCTIONS = NO;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)",
+					"/Users/elioton/Documents/programmation/CICM/SDKs/LeapSDK/lib/libc++",
+				);
+				PRODUCT_NAME = cicm.simpleleap;
+			};
+			name = Deployment;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2FBBEACF08F335010078DB84 /* Build configuration list for PBXProject "cicm.simpleleap" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2FBBEAD008F335010078DB84 /* Development */,
+				2FBBEAD108F335010078DB84 /* Deployment */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Deployment;
+		};
+		2FBBEAE008F335360078DB84 /* Build configuration list for PBXNativeTarget "max-external" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2FBBEAE108F335360078DB84 /* Development */,
+				2FBBEAE208F335360078DB84 /* Deployment */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Deployment;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 089C1669FE841209C02AAC07 /* Project object */;
+}
