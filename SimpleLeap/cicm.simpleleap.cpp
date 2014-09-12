@@ -1,6 +1,30 @@
-/**
- Max Object based on the Leap SDK 2.1.3
+/*
+// Copyright (c) 2014 Eliott Paris, CICM, University of Paris 8.
+// For information on usage and redistribution, and for a DISCLAIMER OF ALL
+// WARRANTIES, see the file, "LICENSE.txt," in this distribution.
 */
+
+/**
+ @file      cicm.simpleleap.cpp
+ @name      cicm.simpleleap
+ @realname  cicm.simpleleap
+ @type      object
+ @module    cicm
+ @author    CICM, Eliott Paris
+ 
+ @digest
+ A simple and light leapmotion object
+ 
+ @description
+ <o>cicm.simpleleap</o> Reports the stabilized center position of the left and right palms in millimeters from the Leap Motion Controller origin.
+ 
+ @discussion
+ <o>cicm.simpleleap</o> Reports the stabilized center position of the left and right palms in millimeters from the Leap Motion Controller origin.
+ 
+ @category device, controller
+ 
+ @seealso cicm.leap
+ */
 
 #include "ext.h"
 #include "ext_obex.h"
@@ -45,6 +69,9 @@ void *cicmleap_class;
 int C74_EXPORT main(void)
 {
 	t_class *c = class_new("cicm.simpleleap", (method)cicmleap_new, (method)cicmleap_free, (long)sizeof(t_cicmleap), 0L, A_GIMME, 0);
+	
+	// @method bang @digest Reports frame datas
+	// @description Reports frame datas
     class_addmethod(c, (method)cicmleap_bang, "bang", 0);
     class_addmethod(c, (method)cicmleap_assist, "assist", A_CANT, 0);
 	
@@ -58,20 +85,19 @@ int C74_EXPORT main(void)
 
 void cicmleap_assist(t_cicmleap *x, void *b, long m, long a, char *s)
 {
-	if (m == ASSIST_INLET) { //inlet
-		sprintf(s, "messages");
-	}
-	else {	// outlet
-		switch (a) {
-			case 0:
-				sprintf(s, "list (left hand position)"); break;
-			case 1:
-				sprintf(s, "list (right hand position)"); break;
-			case 2:
-				sprintf(s, "list (infos)"); break;
-			default:
-				break;
+	if (m == ASSIST_OUTLET)
+	{
+		switch (a)
+		{
+			case 0: sprintf(s, "list (left hand position)"); break;
+			case 1: sprintf(s, "list (right hand position)"); break;
+			case 2: sprintf(s, "list (infos)"); break;
+			default: break;
 		}
+	}
+	else
+	{
+		sprintf(s, "bang outputs frame infos");
 	}
 }
 
@@ -128,8 +154,6 @@ void *cicmleap_new(t_symbol *s, long argc, t_atom *argv)
 		x->out_simple_1 = outlet_new(x, NULL);
 		
 		x->leap = new Leap::Controller;
-		
-		attr_args_process(x, argc, argv);
 	}
 	return (x);
 }
