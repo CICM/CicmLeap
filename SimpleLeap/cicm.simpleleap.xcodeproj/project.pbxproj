@@ -205,7 +205,6 @@
 				COPY_PHASE_STRIP = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"\\\\\\\"$(SRCROOT)/../../../c74support/max-includes\\\\\\\"",
 					"/Users/elioton/Documents/programmation/CICM/SDKs/MaxSDK-6.1.4/c74support/max-includes",
 					"/Users/elioton/Documents/programmation/CICM/SDKs/MaxSDK-6.1.4/c74support/max-includes/x64",
 				);
@@ -234,7 +233,6 @@
 				COPY_PHASE_STRIP = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"\\\\\\\"$(SRCROOT)/../../../c74support/max-includes\\\\\\\"",
 					"/Users/elioton/Documents/programmation/CICM/SDKs/MaxSDK-6.1.4/c74support/max-includes",
 					"/Users/elioton/Documents/programmation/CICM/SDKs/MaxSDK-6.1.4/c74support/max-includes/x64",
 				);

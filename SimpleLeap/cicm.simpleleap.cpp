@@ -113,6 +113,9 @@ void cicmleap_bang(t_cicmleap *x)
 
 void outputHandData(t_cicmleap *x)
 {
+	if (!x->leap || !x->leap->isConnected())
+		return;
+	
 	t_atom* data = new t_atom[3];
 	t_symbol *rootSym = NULL;
 	Leap::HandList hands = x->leap->frame().hands();
