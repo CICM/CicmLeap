@@ -24,3 +24,6 @@ xcshareddata/
 #################
 *.pd_darwin
 *.dll
+
+ThirdParty/LeapSDK/*
+!ThirdParty/LeapSDK/readme.txt
