@@ -84,11 +84,17 @@
 		8FA661CB1ACA8530001BAFAC /* leap.library.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8FA661C81ACA8530001BAFAC /* leap.library.cpp */; };
 		8FA661CC1ACA8530001BAFAC /* leap.library.h in Headers */ = {isa = PBXBuildFile; fileRef = 8FA661C91ACA8530001BAFAC /* leap.library.h */; };
 		8FA661CD1ACA8530001BAFAC /* leap.library.h in Headers */ = {isa = PBXBuildFile; fileRef = 8FA661C91ACA8530001BAFAC /* leap.library.h */; };
+		8FA661D31ACAA8AA001BAFAC /* libLeap.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FA661D21ACAA8AA001BAFAC /* libLeap.dylib */; };
+		8FA661D41ACAA8AA001BAFAC /* libLeap.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FA661D21ACAA8AA001BAFAC /* libLeap.dylib */; };
+		8FA661D61ACAF8CA001BAFAC /* leap.simple.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8FA661D51ACAF8CA001BAFAC /* leap.simple.cpp */; };
+		8FA661D71ACAF8CA001BAFAC /* leap.simple.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8FA661D51ACAF8CA001BAFAC /* leap.simple.cpp */; };
+		8FA661D91ACAF8D7001BAFAC /* leap.gesture.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8FA661D81ACAF8D7001BAFAC /* leap.gesture.cpp */; };
+		8FA661DA1ACAF8D7001BAFAC /* leap.gesture.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8FA661D81ACAF8D7001BAFAC /* leap.gesture.cpp */; };
 		8FAC0BE31969731800E09ACB /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59FB02F717A7FAA9001E977D /* Accelerate.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		5913846F15DAA36D0029AD16 /* cream.pd_darwin */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = cream.pd_darwin; sourceTree = BUILT_PRODUCTS_DIR; };
+		5913846F15DAA36D0029AD16 /* leap.pd_darwin */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = leap.pd_darwin; sourceTree = BUILT_PRODUCTS_DIR; };
 		59FB02F717A7FAA9001E977D /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
 		8FA660A31ACA84B1001BAFAC /* cicm_wrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = cicm_wrapper.h; path = ../ThirdParty/CicmWrapper/Sources/cicm_wrapper.h; sourceTree = "<group>"; };
 		8FA660A41ACA84B1001BAFAC /* epd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = epd.h; path = ../ThirdParty/CicmWrapper/Sources/epd.h; sourceTree = "<group>"; };
@@ -128,7 +134,10 @@
 		8FA6616B1ACA84D0001BAFAC /* epopup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = epopup.h; sourceTree = "<group>"; };
 		8FA661C81ACA8530001BAFAC /* leap.library.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = leap.library.cpp; sourceTree = "<group>"; };
 		8FA661C91ACA8530001BAFAC /* leap.library.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = leap.library.h; sourceTree = "<group>"; };
-		8FAC0BFB1969731800E09ACB /* cream.pd_darwin */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = cream.pd_darwin; sourceTree = BUILT_PRODUCTS_DIR; };
+		8FA661D21ACAA8AA001BAFAC /* libLeap.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libLeap.dylib; path = ../ThirdParty/LeapSDK/lib/libLeap.dylib; sourceTree = "<group>"; };
+		8FA661D51ACAF8CA001BAFAC /* leap.simple.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = leap.simple.cpp; sourceTree = "<group>"; };
+		8FA661D81ACAF8D7001BAFAC /* leap.gesture.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = leap.gesture.cpp; sourceTree = "<group>"; };
+		8FAC0BFB1969731800E09ACB /* leap.pd_darwin */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = leap.pd_darwin; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,6 +145,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8FA661D31ACAA8AA001BAFAC /* libLeap.dylib in Frameworks */,
 				59FB02F817A7FAA9001E977D /* Accelerate.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -144,6 +154,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8FA661D41ACAA8AA001BAFAC /* libLeap.dylib in Frameworks */,
 				8FAC0BE31969731800E09ACB /* Accelerate.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -156,7 +167,9 @@
 			children = (
 				8FA661C81ACA8530001BAFAC /* leap.library.cpp */,
 				8FA661C91ACA8530001BAFAC /* leap.library.h */,
+				8FA661CE1ACA86A7001BAFAC /* Sources */,
 				8FA660A21ACA84A1001BAFAC /* CicmWrapper */,
+				8FA661D21ACAA8AA001BAFAC /* libLeap.dylib */,
 				59FB02F717A7FAA9001E977D /* Accelerate.framework */,
 				5913847015DAA36D0029AD16 /* Products */,
 			);
@@ -165,8 +178,8 @@
 		5913847015DAA36D0029AD16 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				5913846F15DAA36D0029AD16 /* cream.pd_darwin */,
-				8FAC0BFB1969731800E09ACB /* cream.pd_darwin */,
+				5913846F15DAA36D0029AD16 /* leap.pd_darwin */,
+				8FAC0BFB1969731800E09ACB /* leap.pd_darwin */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -268,6 +281,15 @@
 			path = ../ThirdParty/CicmWrapper/Sources/epopup;
 			sourceTree = "<group>";
 		};
+		8FA661CE1ACA86A7001BAFAC /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				8FA661D81ACAF8D7001BAFAC /* leap.gesture.cpp */,
+				8FA661D51ACAF8CA001BAFAC /* leap.simple.cpp */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -312,9 +334,9 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		5913846E15DAA36D0029AD16 /* cream */ = {
+		5913846E15DAA36D0029AD16 /* leap */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 5913847315DAA36D0029AD16 /* Build configuration list for PBXNativeTarget "cream" */;
+			buildConfigurationList = 5913847315DAA36D0029AD16 /* Build configuration list for PBXNativeTarget "leap" */;
 			buildPhases = (
 				5913846B15DAA36D0029AD16 /* Sources */,
 				5913846C15DAA36D0029AD16 /* Frameworks */,
@@ -324,14 +346,14 @@
 			);
 			dependencies = (
 			);
-			name = cream;
+			name = leap;
 			productName = pd1;
-			productReference = 5913846F15DAA36D0029AD16 /* cream.pd_darwin */;
+			productReference = 5913846F15DAA36D0029AD16 /* leap.pd_darwin */;
 			productType = "com.apple.product-type.library.dynamic";
 		};
-		8FAC0BA51969731800E09ACB /* cream_extended */ = {
+		8FAC0BA51969731800E09ACB /* leap_extended */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8FAC0BF91969731800E09ACB /* Build configuration list for PBXNativeTarget "cream_extended" */;
+			buildConfigurationList = 8FAC0BF91969731800E09ACB /* Build configuration list for PBXNativeTarget "leap_extended" */;
 			buildPhases = (
 				8FAC0BA61969731800E09ACB /* Sources */,
 				8FAC0BE21969731800E09ACB /* Frameworks */,
@@ -341,9 +363,9 @@
 			);
 			dependencies = (
 			);
-			name = cream_extended;
+			name = leap_extended;
 			productName = pd1;
-			productReference = 8FAC0BFB1969731800E09ACB /* cream.pd_darwin */;
+			productReference = 8FAC0BFB1969731800E09ACB /* leap.pd_darwin */;
 			productType = "com.apple.product-type.library.dynamic";
 		};
 /* End PBXNativeTarget section */
@@ -366,8 +388,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				5913846E15DAA36D0029AD16 /* cream */,
-				8FAC0BA51969731800E09ACB /* cream_extended */,
+				5913846E15DAA36D0029AD16 /* leap */,
+				8FAC0BA51969731800E09ACB /* leap_extended */,
 			);
 		};
 /* End PBXProject section */
@@ -377,6 +399,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8FA661D91ACAF8D7001BAFAC /* leap.gesture.cpp in Sources */,
 				8FA661881ACA84D0001BAFAC /* eclass_basic.c in Sources */,
 				8FA661821ACA84D0001BAFAC /* eclass_attrnew.c in Sources */,
 				8FA6617A1ACA84D0001BAFAC /* ebox_patcher.c in Sources */,
@@ -398,6 +421,7 @@
 				8FA661AE1ACA84D0001BAFAC /* egraphics_matrix.c in Sources */,
 				8FA661B81ACA84D0001BAFAC /* eobj_handle.c in Sources */,
 				8FA661A61ACA84D0001BAFAC /* egraphics.c in Sources */,
+				8FA661D61ACAF8CA001BAFAC /* leap.simple.cpp in Sources */,
 				8FA661781ACA84D0001BAFAC /* ebox_handle.c in Sources */,
 				8FA661841ACA84D0001BAFAC /* eclass_attroptions.c in Sources */,
 				8FA661BC1ACA84D0001BAFAC /* eobj_router.c in Sources */,
@@ -410,6 +434,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8FA661DA1ACAF8D7001BAFAC /* leap.gesture.cpp in Sources */,
 				8FA661891ACA84D0001BAFAC /* eclass_basic.c in Sources */,
 				8FA661831ACA84D0001BAFAC /* eclass_attrnew.c in Sources */,
 				8FA6617B1ACA84D0001BAFAC /* ebox_patcher.c in Sources */,
@@ -431,6 +456,7 @@
 				8FA661AF1ACA84D0001BAFAC /* egraphics_matrix.c in Sources */,
 				8FA661B91ACA84D0001BAFAC /* eobj_handle.c in Sources */,
 				8FA661A71ACA84D0001BAFAC /* egraphics.c in Sources */,
+				8FA661D71ACAF8CA001BAFAC /* leap.simple.cpp in Sources */,
 				8FA661791ACA84D0001BAFAC /* ebox_handle.c in Sources */,
 				8FA661851ACA84D0001BAFAC /* eclass_attroptions.c in Sources */,
 				8FA661BD1ACA84D0001BAFAC /* eobj_router.c in Sources */,
@@ -491,14 +517,14 @@
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				HEADER_SEARCH_PATHS = "";
 				"HEADER_SEARCH_PATHS[arch=*]" = "";
-				INSTALL_PATH = $SRCROOT/Package/Cream;
-				LIBRARY_SEARCH_PATHS = "";
+				INSTALL_PATH = $SRCROOT/Package/Leap;
+				LIBRARY_SEARCH_PATHS = /Users/Pierre/GitHub/CicmLeap/ThirdParty/LeapSDK/lib;
 				OTHER_LDFLAGS = (
 					"-undefined",
 					dynamic_lookup,
 				);
 				PRELINK_LIBS = "";
-				PRODUCT_NAME = cream;
+				PRODUCT_NAME = leap;
 				USER_HEADER_SEARCH_PATHS = "/Developer/usr/include /usr/local/include";
 			};
 			name = Release;
@@ -522,14 +548,14 @@
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				HEADER_SEARCH_PATHS = "";
 				"HEADER_SEARCH_PATHS[arch=*]" = "";
-				INSTALL_PATH = "$SRCROOT/Package/Cream/externals/MacOs/pd-extended";
-				LIBRARY_SEARCH_PATHS = "";
+				INSTALL_PATH = "$SRCROOT/Package/Leap/externals/MacOs/pd-extended";
+				LIBRARY_SEARCH_PATHS = /Users/Pierre/GitHub/CicmLeap/ThirdParty/LeapSDK/lib;
 				OTHER_LDFLAGS = (
 					"-undefined",
 					dynamic_lookup,
 				);
 				PRELINK_LIBS = "";
-				PRODUCT_NAME = cream;
+				PRODUCT_NAME = leap;
 				USER_HEADER_SEARCH_PATHS = "/Developer/usr/include /usr/local/include";
 			};
 			name = Release;
@@ -545,7 +571,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		5913847315DAA36D0029AD16 /* Build configuration list for PBXNativeTarget "cream" */ = {
+		5913847315DAA36D0029AD16 /* Build configuration list for PBXNativeTarget "leap" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				5913847515DAA36D0029AD16 /* Release */,
@@ -553,7 +579,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8FAC0BF91969731800E09ACB /* Build configuration list for PBXNativeTarget "cream_extended" */ = {
+		8FAC0BF91969731800E09ACB /* Build configuration list for PBXNativeTarget "leap_extended" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8FAC0BFA1969731800E09ACB /* Release */,

@@ -79,12 +79,12 @@ static void leap_simple_bang(t_leap_simple *x)
                 
                 if(hand.isValid() && hand.isLeft())
                 {
-                    outlet_list(x->f_out_hand1, NULL, 3, data);
+                    outlet_list(x->f_out_hand1, &s_list, 3, data);
                 }
                 
                 else if (hand.isValid() && hand.isRight())
                 {
-                    outlet_list(x->f_out_hand2, NULL, 3, data);
+                    outlet_list(x->f_out_hand2, &s_list, 3, data);
                 }
             }
         }

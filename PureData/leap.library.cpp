@@ -11,6 +11,7 @@ void leap_initclass(t_eclass* c)
     char help[MAXPDSTRING];
     sprintf(help, "helps/%s", c->c_class.c_name->s_name);
     class_sethelpsymbol((t_class *)c, gensym(help));
+    class_addmethod((t_class *)c, (t_method)ebox_attrprint,         gensym("attrprint"),    A_NULL,  0);
 }
 
 char leapersion[] = "Beta 0.1";
@@ -32,11 +33,14 @@ extern "C" void leap_setup(void)
 
 extern "C" void setup_leap0x2elibrary(void)
 {
-	post("Cream Library by Pierre Guillot");
+	post("Leap Library by Eliott PAris & Pierre Guillot");
 	post("© 2013 - 2015  CICM | Paris 8 University");
     post("Version %s (%s) for %s",leapersion, __DATE__, pdversion);
     post("");
 
+    setup_leap0x2esimple();
+    setup_leap0x2egesture();
+    
     pd_library_add_folder("leap", "misc");
     pd_library_add_folder("leap", "helps");
 }
