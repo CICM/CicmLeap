@@ -1,5 +1,5 @@
 #################
-## XCode
+## XCode & MAc
 #################
 xcuserdata/
 xcshareddata/
@@ -12,6 +12,7 @@ xcshareddata/
 
 *.mode1V3
 *.pbxuser
+*.dylib
 
 #################
 ## MAX
@@ -25,5 +26,8 @@ xcshareddata/
 *.pd_darwin
 *.dll
 
+#################
+## ThirdParty
+#################
 ThirdParty/LeapSDK/*
 !ThirdParty/LeapSDK/readme.txt
