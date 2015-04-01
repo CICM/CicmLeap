@@ -16,14 +16,20 @@ normal @fontslant roman @fontsize 11 @receive (null) @send (null) @presetname
 (null) @bgcolor 0.75 0.75 0.75 1 @bdcolor 0.5 0.5 0.5 1 @crcolor 0.5
 0.5 0.5 1;
 #X msg 347 39 attrprint;
+#X obj 509 98 leap.infos;
+#X obj 515 149 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+1;
+#X obj 498 45 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
 #X connect 0 0 7 0;
 #X connect 2 0 3 0;
 #X connect 4 0 5 0;
 #X connect 6 0 1 0;
 #X connect 6 1 2 0;
 #X connect 6 1 8 0;
-#X connect 6 2 4 0;
 #X connect 7 0 6 0;
 #X connect 9 0 6 0;
 #X connect 10 0 9 0;
 #X connect 11 0 6 0;
+#X connect 12 0 13 0;
+#X connect 14 0 12 0;

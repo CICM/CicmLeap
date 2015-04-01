@@ -22,15 +22,72 @@
 
 #include "../leap.library.h"
 
-using namespace Leap;
+class GestureListener : public Leap::Listener
+{
+public:
+    Leap::Gesture::Type m_type;
+    Leap::CircleGesture m_circle;
+    Leap::SwipeGesture  m_swipe;
+    Leap::KeyTapGesture m_keytap;
+    Leap::SwipeGesture  m_screentap;
+    
+    GestureListener() : m_type(Leap::Gesture::TYPE_INVALID)
+    {
+        ;
+    }
+    
+    
+    void onFrame(const Leap::Controller& ctrl) override
+    {
+        if(ctrl.isConnected())
+        {
+            Leap::GestureList gestures = ctrl.frame().gestures();
+            /*
+            if(gestures.count())
+            {
+                Gesture gesture = gestures[0];
+                if(gestures[0].isValid())
+                {
+                    if(gestures[0].type() == Gesture::TYPE_CIRCLE)
+                    {
+                        ScreenTapGesture screentap = gestures[0];
+                        t_atom data[4];
+                        Leap::Vector vector = screentap.direction();
+                        atom_setsym(data, gensym("direction"));
+                        atom_setfloat(data+1, vector.yaw());
+                        atom_setfloat(data+1, vector.roll());
+                        atom_setfloat(data+1, vector.pitch());
+                        outlet_anything(x->f_gesture, leap_sym_circle, 0, NULL);
+                    }
+                    else if(gesture.type() == Gesture::TYPE_SWIPE)
+                    {
+                        ;
+                    }
+                    else if(gesture.type() == Gesture::TYPE_KEY_TAP)
+                    {
+                        ;
+                    }
+                    else if(gesture.type() == Gesture::TYPE_SCREEN_TAP)
+                    {
+                        ;
+                    }
+                    else
+                    {
+                        ;
+                    }
+                }
+            }*/
+        }
+    }
+};
 
 typedef struct  _leap_gesture
 {
-    t_eobj      f_box;
-    t_outlet*   f_gesture;
-    t_outlet*   f_parameters;
-    Controller* f_leap;
-    void*       f_attr;
+    t_eobj              f_box;
+    t_outlet*           f_gesture;
+    t_outlet*           f_parameters;
+    GestureListener*    f_listener;
+    void*               f_attr;
 } t_leap_gesture;
 
 static t_eclass *leap_gesture_class;
@@ -42,33 +99,22 @@ static void *leap_gesture_new(t_symbol *s, int argc, t_atom *argv)
     {
         x->f_gesture    = anythingout(x);
         x->f_parameters = anythingout(x);
-        x->f_leap = new Controller();
-        
-        if(!x->f_leap)
-        {
-            eobj_free(x);
-            return NULL;
-        }
-        else
-        {
-            ebox_attrprocess_viatoms(x, argc, argv);
-        }
-        
+        ebox_attrprocess_viatoms(x, argc, argv);
     }
     return (x);
 }
 
 static void leap_gesture_free(t_leap_gesture *x)
 {
-    delete x->f_leap;
     eobj_free(x);
 }
 
 static void leap_gesture_bang(t_leap_gesture *x)
 {
+    /*
     if(x->f_leap->isConnected())
     {
-        GestureList gestures = x->f_leap->frame().gestures();
+        Leap::GestureList gestures = x->f_leap->frame().gestures();
         if(gestures.count())
         {
             Gesture gesture = gestures[0];
@@ -104,10 +150,12 @@ static void leap_gesture_bang(t_leap_gesture *x)
             }
         }
     }
+     */
 }
 
 static t_pd_err leap_gesture_attr_set(t_leap_gesture *x, t_eattr *attr, long argc, t_atom *argv)
 {
+    /*
     if(attr && argc && argv)
     {
         if(attr->name == leap_sym_circle)
@@ -179,6 +227,7 @@ static t_pd_err leap_gesture_attr_set(t_leap_gesture *x, t_eattr *attr, long arg
         
     }
     return 0;
+     */
 }
 
 extern "C" void setup_leap0x2egesture(void)

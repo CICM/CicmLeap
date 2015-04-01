@@ -23,23 +23,19 @@ char pdversion[] = "Pd-Vanilla";
 
 extern "C" void libpd_loadcream(void)
 {
-    setup_leap0x2elibrary();
+    leap_setup();
 }
 
 extern "C" void leap_setup(void)
 {
-    setup_leap0x2elibrary();
-}
-
-extern "C" void setup_leap0x2elibrary(void)
-{
-	post("Leap Library by Eliott PAris & Pierre Guillot");
-	post("© 2013 - 2015  CICM | Paris 8 University");
+    post("Leap Library by Eliott PAris & Pierre Guillot");
+    post("© 2013 - 2015  CICM | Paris 8 University");
     post("Version %s (%s) for %s",leapersion, __DATE__, pdversion);
     post("");
-
+    
     setup_leap0x2esimple();
     setup_leap0x2egesture();
+    setup_leap0x2einfos();
     
     pd_library_add_folder("leap", "misc");
     pd_library_add_folder("leap", "helps");

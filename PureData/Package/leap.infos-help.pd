@@ -1,0 +1,17 @@
+#N canvas 305 323 674 340 10;
+#X obj 91 132 leap.infos;
+#X obj 148 161 c.prepend set;
+#X obj 91 177 c.toggle @size 15 15 @fontname Helvetica @fontweight
+normal @fontslant roman @fontsize 11 @receive (null) @send (null) @presetname
+(null) @bgcolor 0.75 0.75 0.75 1 @bdcolor 0.5 0.5 0.5 1 @crcolor 0.5
+0.5 0.5 1;
+#X obj 91 84 c.bang @size 17 17 @fontname Helvetica @fontweight normal
+@fontslant roman @fontsize 11 @receive (null) @send (null) @bgcolor
+0.75 0.75 0.75 1 @bdcolor 0.5 0.5 0.5 1 @bacolor 0 0 0 1;
+#X msg 148 185;
+#X msg 127 84 getdevices;
+#X connect 0 0 2 0;
+#X connect 0 1 1 0;
+#X connect 1 0 4 0;
+#X connect 3 0 0 0;
+#X connect 5 0 0 0;

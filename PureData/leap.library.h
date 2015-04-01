@@ -15,13 +15,16 @@ extern "C"
 
 void leap_initclass(t_eclass* c);
 
-extern "C" void setup_leap0x2elibrary(void);
 extern "C" void libpd_loadleap(void);
 extern "C" void leap_setup(void);
 
 extern "C" void setup_leap0x2esimple(void);
 extern "C" void setup_leap0x2egesture(void);
+extern "C" void setup_leap0x2einfos(void);
 
+static Leap::Controller LeapController;
+
+static t_symbol* leap_sym_controler                     = gensym("leapcontroler");
 static t_symbol* leap_sym_direction                     = gensym("direction");
 
 static t_symbol* leap_sym_circle                        = gensym("circle");
